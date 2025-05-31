@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex container</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    background: #333;
+
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+    /* flex-flow: row wrap; */
+    /* space around : meme espacememnt autour de chaque item 
+        space evenlu : meme espacement sans les padding autour
+        space between : element : droite et gauche bien coller sans les marges*/
+    justify-content: center;
+
+  }
+ .container.column {
+ 
+  height: 100vh;
+  flex-flow: row nowrap;
+  /*centrer verticalement
+  flex-direction: column;
+  width: 100vw;
+  align-items: stretch;*/
+  flex-flow: row nowrap;
+  /* align-items: stretch; */
+  width: 500px;
+  align-items: flex-start;
+  
+  
+  /* justify-content: center; */
+
+
+  /* align-items: stretch; */
+  /* ALIGNEMENT VERTICAL
+  align-content: center;
+   justify-content: space-between;
+
+    flex-flow: row wrap; */
+  height: 100vh;
+
+}
+
+  /* .column {
+    flex-wrap: wrap;
+
+  } */
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .flex-flow {
+    height: 500px;
+    flex-flow: column-reverse wrap;
+  }
+  /* .item2 {
+    width: 100%;
+     background: #2950b9;
+    text-align: center;
+    height: 50px;
+    margin: 5px 0;
+  } */
+
+  .item {
+    background: #2950b9;
+    color: white;
+    text-align: center;
+    /* flex-basis: 200px; prioritaire sur width */
+    height: 200px;
+    margin: 5px;
+    flex-basis: 200px;
+  }
+  .item-1 {
+    /* flex: 3; */
+    /* flex-basis: 200px; */
+    /* flex : 1; */
+    /* flex-basis : 200px; */
+    /* flex-shrink: 0 0 200px; */
+    flex: 0 0 200px;
+    align-self: flex-end;
+    order: 2;
+
+  }
+   .item-2 {
+    /* flex-grow: 1; */
+   /* flex: auto; */
+    order: 1;
+   
+  }
+   .item-3 {
+    /* flex:1; */
+     /* flex-grow : 2; */
+     flex-shrink: 1 1 auto;
+     order:4;
+     align-self: center;
+  }
+    .item-4 {
+    /* flex:1; */
+     /* flex-basis : 200px; */
+     flex-shrink: 2;
+     order: 3;
+  }
+  
+
+</style>
+<body>
+  <!-- commentaire pour  .container>.item{$}*4 -->
+       <h2>Par défaut</h2>
+    <!-- Les éléments flexibles rétrécissent pour tenir sur la même ligne.
+      Par défaut la direction est row et flex-wrap vaut nowrap. -->
+   <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+    <div class="item">13</div>
+    <div class="item">14</div>
+    <div class="item">15</div>
+   </div>
+      <h2>Utilisation d'une autre direction</h2>
+
+    <div class="container column">
+      <p class="item item-1">1</p>
+      <p class="item item-2">2</p>
+      <p class="item item-3">3</p>
+      <p class="item item-4">4</p>
+    
+    </div>
+
+      <h2>Utilisation de wrap</h2>
+    <!-- Wrap permet d'autoriser les éléments à passer à la ligne -->
+    <div class="container wrap">
+      <p class="item">1</p>
+      <p class="item">2</p>
+      <p class="item">3</p>
+      <p class="item">4</p>
+      <p class="item">5</p>
+      <p class="item">6</p>
+      <p class="item">7</p>
+      <p class="item">8</p>
+      <p class="item">9</p>
+      <p class="item">10</p>
+    </div>
+        <h2>Utilisation de flex-flow</h2>
+    <div class="container flex-flow">
+      <!-- L'axe principal est ici vertical, et les éléments sont alignés du bas vers le haut (reverse).
+        Ils prennent plusieurs colonnes grâce à wrap, sinon leur hauteur serait réduite pour tenir sur 
+        une seule colonne.-->
+      <p class="item">1</p>
+      <p class="item">2</p>
+      <p class="item">3</p>
+      <p class="item">4</p>
+      <p class="item">5</p>
+      <p class="item">6</p>
+      <p class="item">7</p>
+      <p class="item">8</p>
+      <p class="item">9</p>
+      <p class="item">10</p>
+    </div>
+
+  
+</body>
+</html>
