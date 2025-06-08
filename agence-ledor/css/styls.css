@@ -7,7 +7,9 @@
 body {
     
   font-family: "Montserrat", sans-serif;
-  /* font-family: "Liu Jian Mao Cao", cursive; */
+  background: #eee;
+  color: #333;
+ 
 }
 
 p {
@@ -20,5 +22,143 @@ a {
     color : #333;
     text-decoration: none;
 }
+ul {
+    list-style: none;
+}
+strong {
+    color: #f1c40f;
+    font-weight: 400;
+}
+/* ***************************************** */
+/* class */
+.container {
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+}
+.title {
+    font-weight: 300;
+    font-style: 2rem;
+    margin-bottom: 3rem;
+    
+}
 
 /* ********************************************** */
+
+/* Vp  + header */
+
+.vp-container {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+header {
+    /* background: red; */
+    /* flex: 0 0 60px; pour le test */
+    padding: 1rem 2rem;
+    background: #333;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    line-height: 1.8rem;
+}
+
+.vp-logo {
+   
+    margin-bottom: 0;
+    font-family: "Long Cang", cursive;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+
+}
+.vp-logo i {
+    color: #f1c40f;
+    font-size: 1.5rem;
+}
+.vp-logo a {
+    font-size: 3rem;
+    font-weight: 300;
+}
+header ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+
+}
+header ul li {
+    padding: 1rem;
+
+}
+header ul li a:hover {
+    color: #f1c40f;
+}
+header a {
+    color: white;
+}
+
+
+/* ********************************** */
+/* section vp */
+.vp {
+    /* background: purple; */
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/frame.jpg) center center/cover;
+}
+
+.vp-content {
+    max-width: 800px;
+    text-align: center;
+    color: white;
+}
+.vp-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+
+}
+.vp-content p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+/* *************************** */
+
+/* offer */
+
+.offer {
+    padding: 10rem 1rem 10rem 1rem;
+}
+.offer-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+}
+.offer-elem {
+    border: 1px solid #ddd;
+    background: white;
+    margin: 1rem;
+    flex: 1;
+}
+.offer-elem-img {
+    width: 100%;
+}
+.offer-elem-text {
+    padding: 2rem;
+    text-align: center;
+}
+.offer-separator {
+    margin: 1rem auto;
+    height: 2px;
+    width: 50px;
+    background: #333;
+
+}
