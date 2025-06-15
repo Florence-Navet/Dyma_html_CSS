@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <style>
+      :root {
+        --red: #e74c3c;
+        --box-shadow: 0 0 4px rgba(0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+      }
+      .gray-block {
+        --red: blue;
+        box-shadow: var(--box-shadow);
+      }
+
+      .gray-block-text {
+        color: var(--red);
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, ut.
+    </p>
+    <div class="gray-block">
+      <p class="gray-block-text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium,
+        ipsa.
+      </p>
+    </div>
+  </body>
+</html>
