@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les ombres</title>
+    <style>
+      div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      span {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background: lightgray;
+        margin: 20px;
+        text-align: center;
+      }
+
+      .ombre-10 {
+        box-shadow: 10px 10px red;
+      }
+
+      .ombre-inversee-10 {
+        box-shadow: -10px -10px red;
+      }
+
+      .ombre-10-inside {
+        box-shadow: 10px 10px red inset;
+      }
+
+      .ombre-10-etalee {
+        box-shadow: 10px 10px 0px 4px red;
+      }
+
+      .ombre-10-floue {
+        box-shadow: 10px 10px 20px red;
+      }
+
+      .plusieurs-ombres {
+        box-shadow: 1px 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999,
+          4px 4px 0px #999, 5px 5px 0px #999, 6px 6px 0px #999;
+      }
+
+      .ombre-texte-simple {
+        text-shadow: red 1px -2px;
+      }
+
+      .ombre-texte-complexe {
+        text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Les box-shadows</h2>
+    <div>
+      <span class="ombre-10">Ombre x / y</span>
+      <span class="ombre-inversee-10">Ombre inversée</span>
+      <span class="ombre-10-inside">Omnre intérieure</span>
+      <span class="ombre-10-etalee">Ombre étalée</span>
+      <span class="ombre-10-floue">Ombre floue</span>
+      <span class="plusieurs-ombres">Ombres multiples</span>
+    </div>
+
+    <h2>Les text-shadows</h2>
+    <div>
+      <span class="ombre-texte-simple">Ombre simple</span>
+      <span class="ombre-texte-complexe">Ombres multiples</span>
+    </div>
+  </body>
+</html>

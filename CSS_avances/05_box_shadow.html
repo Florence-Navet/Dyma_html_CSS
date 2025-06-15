@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-shadow et text shadox</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      /* flex-flow: row nowrap; */
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #ddd;
+      gap: 20px; /* espace entre box et box2 */
+    }
+    .box {
+      width: 100%;
+      height: 200px;  
+      background: white;
+      /* border: 1px solid #333; */
+      /* nb 1 et 2 : horizontal et vertical, nb3 : flou , nb4: portée de l'ombre avec le rgba on peut avec une transparence 
+      la propriete inset met l'ombre à l'interieur*/
+      box-shadow: 10px 10px 15px 10px rgba(255, 0, 0, 0.5) inset;
+      text-shadow: 1px 1px 2px red;
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: center;
+      /* align-items: center; */
+      text-align: center;
+      
+
+    }
+    .box2 {
+      width: 300px;
+      height: 200px;
+      background: white;
+      /* display: flex; */
+
+      /* justify-content: center; */
+      /* align-items: center;
+      text-align: center; */
+    
+
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3), 5px 3px 3px  red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, tenetur!</p>
+    </div>
+    <div class="box2"></div>
+    
+  </div>
+  
+  
+</body>
+</html>

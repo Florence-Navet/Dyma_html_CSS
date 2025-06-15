@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter et opacity</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    body img {
+      width: 300px;
+      /* - blur pour le flouter 
+      - brightness pour la luminosité
+      - contrast pour le contrast
+      - grayscale : effet noir et blanc
+      _ invert : inverse les couleurs
+      - opacity : rend l'image transparente
+      - sepia : effet ancien */
+      /* filter:blur(2px);
+      filter:brightness(50%);
+      filter:contrast(30%); */
+      /* filter:drop-shadow(5px 5px 2px red); */
+      filter:grayscale(100%);
+      /* filter : invert(20%);
+      filter : opacity(40%);
+      filter : sepia(100%); */ 
+      opacity : 0.5;
+      
+
+    }
+    body img:hover {
+      filter:  grayscale(0%);
+      filter:drop-shadow(5px 5px 2px red);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <img src="./img/oiseau.jpg" alt="oiseau">
+
+  
+</body>
+</html>

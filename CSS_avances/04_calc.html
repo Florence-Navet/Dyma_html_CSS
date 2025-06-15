@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cal</title>
+  <style>
+    *{
+      margin: 0;
+    }
+    header {
+      height: 50px;
+      background: #333;
+    }
+    .vp {
+    height: calc( 100vh - 250px ) ;
+    /* height: 100vh; */
+    min-height: calc();
+    background: red;
+    display: flex;
+    }
+    .item1 {
+    /* width: 50%; */
+    width: calc( 50% + 10px );
+    height: 100px;
+    background:purple;
+
+    }
+    .item2 {
+    width: calc( 50% - 10px );
+    height: 100px;
+    background: plum;
+    }
+    footer {
+      height: 250px;
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <div class="vp">
+  <div class="item1"></div>
+  <div class="item2"></div>
+  
+  </div>
+  <footer></footer>
+ 
+
+  
+</body>
+</html>
