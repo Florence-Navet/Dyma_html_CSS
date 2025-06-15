@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les transitions</title>
+    <style>
+      .transition1 {
+        margin-bottom: 30px;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        transition: width 2s, height 2s, background-color 2s;
+        /* ou alors, exactement équivalent à : */
+        transition: all 2s;
+      }
+
+      .transition1:hover {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+      }
+
+      /*  Transition 2 */
+
+      nav {
+        display: flex;
+        padding: 12px;
+        background-color: #333;
+      }
+
+      a {
+        width: 100px;
+        margin-right: 12px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        outline: 0;
+        padding: 8px 12px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        /* On anime les deux propriétés qui changent : */
+        transition: all 0s ease;
+      }
+
+      a:hover,
+      a:focus {
+        /* Les nouvelles valeurs en hover ou en focus : */
+        color: #333;
+        background-color: #fff;
+        transition-duration: 1.2s;
+      }
+
+      /*  Fonctions béziers */
+
+      .transition3 {
+        margin-top: 20px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .d1,
+      .d2,
+      .d3,
+      .d4,
+      .d5,
+      .d6 {
+        transition: all 2s;
+      }
+
+      .d1 {
+        transition-timing-function: ease;
+      }
+      .d2 {
+        transition-timing-function: ease-in;
+      }
+      .d3 {
+        transition-timing-function: ease-out;
+      }
+      .d4 {
+        transition-timing-function: ease-in-out;
+      }
+      .d5 {
+        transition-timing-function: linear;
+      }
+      .d6 {
+        transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+      }
+
+      .d1:hover,
+      .d2:hover,
+      .d3:hover,
+      .d4:hover,
+      .d5:hover,
+      .d6:hover {
+        background: orange;
+        margin-left: calc(100% - 100px);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Les transitions</h2>
+    <div class="transition1"></div>
+    <nav>
+      <a href="#">Lien1</a>
+      <a href="#">Lien2</a>
+      <a href="#">Lien3</a>
+      <a href="#">Lien4</a>
+    </nav>
+    <div class="transition3 d1">ease</div>
+    <div class="transition3 d2">ease-in</div>
+    <div class="transition3 d3">ease-out</div>
+    <div class="transition3 d4">ease-in-out</div>
+    <div class="transition3 d5">linear</div>
+    <div class="transition3 d6">personnalisée</div>
+  </body>
+</html>

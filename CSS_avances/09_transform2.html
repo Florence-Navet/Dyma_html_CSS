@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les transformations</title>
+    <style>
+      .container {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 80px;
+      }
+
+      .boite {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+        border: 1px solid black;
+        margin-right: 10px;
+      }
+
+      .translateX {
+        transform: translateX(30px);
+      }
+
+      .translateY {
+        transform: translateY(60px);
+      }
+
+      .translateXY {
+        transform: translate(-50px, -40px);
+      }
+
+      .rotateX {
+        transform: rotateX(45deg);
+      }
+
+      .rotateY {
+        transform: rotateY(45deg);
+      }
+
+      .rotateXY {
+        transform: rotate(45deg);
+      }
+      .rotateXYTop {
+        transform: rotate(45deg);
+        transform-origin: top left;
+        margin-left: 100px;
+      }
+
+      .scaleX {
+        transform: scaleX(1.2);
+        margin-left: 50px;
+      }
+
+      .scaleY {
+        transform: scaleY(1.4);
+        margin-left: 50px;
+      }
+
+      .scale {
+        transform: scale(1.5);
+        margin-left: 50px;
+      }
+
+      .skewX {
+        transform: skewX(-30deg);
+        margin-left: 50px;
+      }
+
+      .skewY {
+        transform: skewY(30deg);
+        margin-left: 50px;
+      }
+
+      .skew {
+        transform: skew(30deg);
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Les translations</h2>
+    <div class="container">
+      <div class="boite translateX">30px sur X</div>
+      <div class="boite translateY">60px sur Y</div>
+      <div class="boite translateXY">-50px sur X -40px sur Y</div>
+    </div>
+
+    <h2>Les rotations</h2>
+    <div class="container">
+      <div class="boite rotateX">45deg sur X</div>
+      <div class="boite rotateY">45deg sur Y</div>
+      <div class="boite rotateXY">45deg par rapport au centre</div>
+      <div class="boite rotateXYTop">45deg par rapport au coin haut gauche</div>
+    </div>
+
+    <h2>Les changements d'échelle</h2>
+    <div class="container">
+      <div class="boite scaleX">x1.2 fois sur X</div>
+      <div class="boite scaleY">x1.4 fois sur Y</div>
+      <div class="boite scale">x1.5 fois sur X et Y</div>
+    </div>
+
+    <h2>Les distorsions</h2>
+    <div class="container">
+      <div class="boite skewX">-30deg sur X</div>
+      <div class="boite skewY">30deg sur Y</div>
+      <div class="boite skew">30deg sur X et Y</div>
+    </div>
+  </body>
+</html>
