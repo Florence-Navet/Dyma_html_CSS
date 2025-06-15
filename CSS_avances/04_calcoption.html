@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>La fonction calc()</title>
+    <style>
+      html {
+        padding: 0 2rem;
+        background-color: #01164d;
+      }
+
+      h2 {
+        color: gold;
+      }
+
+      section {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        background-color: #fff;
+      }
+
+      .item {
+        margin: 10px;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: grey;
+      }
+
+      .item-center-h {
+        left: calc(50% - 40px);
+      }
+
+      .item-center-v {
+        top: calc(50% - 40px);
+      }
+
+      .center-text {
+        width: 40px;
+        line-height: 18px;
+        position: absolute;
+        left: calc(50% - 20px);
+        top: calc(50% - 9px);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Centrer horizontalement</h2>
+
+    <section>
+      <div class="item item-center-h">
+        <span class="center-text">60x60</span>
+      </div>
+    </section>
+
+    <h2>Centrer verticalement</h2>
+
+    <section>
+      <div class="item item-center-v">
+        <span class="center-text">60x60</span>
+      </div>
+    </section>
+
+    <h2>Centrer</h2>
+
+    <section>
+      <div class="item item-center-h item-center-v">
+        <span class="center-text">60x60</span>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les gradients linéaires</title>
+    <style>
+      div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      span {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        text-align: center;
+      }
+
+      .gradient-simple {
+        background: linear-gradient(red, blue);
+      }
+
+      .gradient-30 {
+        background: linear-gradient(red 30%, blue);
+      }
+
+      .gradient-complexe {
+        background: linear-gradient(red 10%, 40%, blue 80%);
+      }
+
+      .gradient-3-couleurs {
+        background: linear-gradient(red, orange, blue);
+      }
+
+      .gradient-x {
+        background: linear-gradient(-90deg, blue, red);
+      }
+
+      .gradient-lt {
+        background: linear-gradient(to left top, blue, red);
+      }
+
+      .gradient-turn {
+        background: linear-gradient(0.25turn, blue, orange, red);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Les linear-gradients</h2>
+    <div>
+      <span class="gradient-simple"></span>
+      <span class="gradient-30"></span>
+      <span class="gradient-complexe"></span>
+      <span class="gradient-3-couleurs"></span>
+      <span class="gradient-x"></span>
+      <span class="gradient-lt"></span>
+      <span class="gradient-turn"></span>
+    </div>
+  </body>
+</html>
