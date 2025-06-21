@@ -1,0 +1,99 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* variables */
+:root {
+    --primary: #be2529;
+    --dark: #333;
+    --secondary: #0d0d0d;
+    --gray: #ddd;
+    --gray-light:#eee;
+    --gray-hint:#555;
+
+}
+/* general */
+:root {
+    font-size: 62.5%;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+   font-size: 1.6rem;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  
+  font-family: "Staatliches", cursive;
+}
+a {
+    font-size: 1.6rem;
+    color:var(--dark);
+    text-decoration: none;
+}
+/* Utility */
+
+.container {
+    display: block;
+    margin: auto;
+    max-width: 1100px;
+}
+.text-primary {
+  
+     color: var(--primary);
+}
+.text-primary:hover {
+      opacity: 0.8;
+   
+}
+.btn {
+padding: 1rem 1rem;
+border-radius: 0.5rem;
+cursor: pointer;
+border: 0;
+transition: all 0.2s;
+}
+.btn-light {
+    font-size: 1.6rem;
+    background: white;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.btn-light:hover {
+    background: var(--primary);
+    color: #fff;
+
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    place-items: center start;
+    margin:0.5rem auto;
+}
+header .logo {
+    font-size: 30px;
+    font-family: "Staatliches", cursive;
+
+}
+header a {
+    display: block;
+    padding: 1rem;
+}
+header ul {
+    display: flex;
+    align-items: center;
+}
+header ul li {
+    padding: 1rem 1.5rem;
+}
+ul {
+    list-style: none;
+}   
