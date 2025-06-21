@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les grilles</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h2,
+      h3 {
+        margin: 5px;
+      }
+
+      .container-flex {
+        display: inline-flex;
+        flex-flow: column;
+        margin-bottom: 5px;
+      }
+
+      .wrapper {
+        box-sizing: border-box;
+        display: inline-grid;
+        margin-left: 5px;
+        padding: 5px;
+        border: red solid 2px;
+        width: 200px;
+        height: 200px;
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: repeat(3, 30px);
+      }
+
+      .elem {
+        background: #4a69bd;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .auto-row-50 {
+        grid-auto-rows: 50px;
+      }
+
+      .auto-col {
+        grid-template-rows: repeat(4, 30px);
+        grid-auto-flow: column;
+      }
+
+      .auto-row-dense {
+        grid-template-rows: repeat(4, 30px);
+        grid-auto-flow: row dense;
+      }
+
+      .auto-col-dense {
+        grid-template-rows: repeat(4, 30px);
+        grid-auto-flow: column dense;
+      }
+
+      /* Nous verrons plus tard grid-column / grid-row
+        Nous l'uitlisons pour changer la taille des éléments */
+      .h-1 {
+        grid-column: span 2;
+        grid-row: span 2;
+        background: #eb2f06;
+      }
+      .h-2 {
+        grid-column: span 2;
+        grid-row: span 3;
+        background: #fa983a;
+      }
+      .h-3 {
+        grid-column: span 1;
+        grid-row: span 1;
+        background: #78e08f;
+      }
+      .h-4 {
+        grid-column: span 1;
+        grid-row: span 1;
+        background: #38ada9;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Définition implicite</h2>
+    <div class="container-flex">
+      <h3>Sans préciser de taille</h3>
+      <!--  La dernière piste de rangée
+        ajoutée automatiquement a une taille auto -->
+      <div class="wrapper">
+        <div class="elem">1</div>
+        <div class="elem">2</div>
+        <div class="elem">3</div>
+        <div class="elem">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Taille auto row de 50px</h3>
+      <!--  La dernière piste de rangée
+        ajoutée automatiquement a une taille de 50px -->
+      <div class="wrapper auto-row-50">
+        <div class="elem">1</div>
+        <div class="elem">2</div>
+        <div class="elem">3</div>
+        <div class="elem">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Taille auto col</h3>
+      <!--  La dernière piste de colonne
+        ajoutée automatiquement a une taille auto -->
+      <div class="wrapper auto-col">
+        <div class="elem">1</div>
+        <div class="elem">2</div>
+        <div class="elem">3</div>
+        <div class="elem">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+
+    <h2>Placement automatique</h2>
+    <div class="container-flex">
+      <h3>Row (défaut)</h3>
+      <div class="wrapper">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+
+    <div class="container-flex">
+      <h3>Row dense</h3>
+      <div class="wrapper auto-row-dense">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Column</h3>
+      <div class="wrapper auto-col">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Column Dense</h3>
+      <div class="wrapper auto-col-dense">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+  </body>
+</html>

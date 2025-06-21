@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    body  {
+      margin: 0;
+    }
+    .container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 300px 300px;
+      /* hauteur ou largeur par defaut des colonne ou lignes qui depassent */
+      grid-auto-rows: 50px;
+      grid-auto-columns: 50px;
+      /* les elements se positionnent dans les trous */
+      grid-auto-flow: column;
+
+    }
+
+    .item {
+      background: blue;
+      color: white;
+      font-weight: bold;
+      border : 1px solid red;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- .container>.item{item-S}*6 -->
+  <div class="container">
+    <div class="item">item-1</div>
+    <div class="item">item-2</div>
+    <div class="item">item-3</div>
+    <div class="item">item-4</div>
+    <div class="item">item-5</div>
+    <div class="item">item-6</div>
+    <div class="item">item-7</div>
+  </div>
+  
+</body>
+</html>

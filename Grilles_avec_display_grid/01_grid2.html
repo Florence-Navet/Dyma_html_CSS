@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les grilles</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h2,
+      h3 {
+        margin: 5px;
+      }
+
+      .container-flex {
+        display: inline-flex;
+        flex-flow: column;
+        margin-bottom: 5px;
+      }
+
+      .wrapper {
+        box-sizing: border-box;
+        display: inline-grid;
+        margin-left: 5px;
+        padding: 5px;
+        border: red solid 2px;
+        width: 200px;
+        height: 200px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      .elem {
+        background: #4a69bd;
+        border: 1px solid black;
+        min-height: 50%;
+        min-width: 50%;
+      }
+
+      .a-center {
+        align-items: center;
+      }
+      .a-start {
+        align-items: start;
+      }
+      .a-end {
+        align-items: end;
+      }
+      .a-stretch {
+        align-items: stretch;
+      }
+
+      .j-center {
+        justify-items: center;
+      }
+      .j-start {
+        justify-items: start;
+      }
+      .j-end {
+        justify-items: end;
+      }
+      .j-stretch {
+        justify-items: stretch;
+      }
+
+      .aj-center {
+        place-items: center;
+      }
+      .aj-start {
+        place-items: start;
+      }
+      .aj-end {
+        place-items: end;
+      }
+      .aj-start-end {
+        place-items: start end;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Align-items</h2>
+    <div class="container-flex">
+      <h3>Center</h3>
+      <div class="wrapper a-center">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start</h3>
+      <div class="wrapper a-start">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>End</h3>
+      <div class="wrapper a-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Stretch</h3>
+      <div class="wrapper a-stretch">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+
+    <br /><br /><br />
+
+    <h2>Justify-items</h2>
+    <div class="container-flex">
+      <h3>Center</h3>
+      <div class="wrapper j-center">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start</h3>
+      <div class="wrapper j-start">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>End</h3>
+      <div class="wrapper j-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Stretch</h3>
+      <div class="wrapper j-stretch">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+
+    <h2>Place-items</h2>
+    <div class="container-flex">
+      <h3>Center</h3>
+      <div class="wrapper aj-center">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start</h3>
+      <div class="wrapper aj-start">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>End</h3>
+      <div class="wrapper aj-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start / End</h3>
+      <div class="wrapper aj-start-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+  </body>
+</html>
