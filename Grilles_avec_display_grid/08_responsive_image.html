@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Les grilles</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .conteneur {
+        display: grid;
+        margin: 2em;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 1em;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        filter: blur(0px) grayscale(0);
+        transition: filter 0.5s ease-out;
+      }
+
+      .title {
+        font-size: 2em;
+        font-family: "Anton", sans-serif;
+        letter-spacing: 0.4em;
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(90, 0, 10, 0.3);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        text-shadow: 2px 2px 10px #000000;
+      }
+
+      article {
+        position: relative;
+      }
+
+      article:hover {
+        z-index: 1;
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      article:hover img {
+        filter: blur(2px) grayscale(0.5);
+        transition: filter 0.2s ease-in;
+      }
+
+      article:hover .title {
+        opacity: 1;
+        transition: all 0.4s ease-in;
+        text-shadow: 4px 5px 10px #1e3799;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Gallerie des villes</h2>
+    <div class="conteneur">
+      <article>
+        <span class="title">Paris</span>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1920px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"
+          alt="paris"
+        />
+      </article>
+      <article>
+        <span class="title">Londres</span
+        ><img
+          src="https://image-tc.galaxy.tf/wijpeg-2vwiddchtdmjikneztikreggo/london_wide.jpg?crop=0%2C105%2C2000%2C1125&width=1980"
+          alt="london"
+        />
+      </article>
+      <article>
+        <span class="title">New York</span><img
+        src="https://static.nationalgeographic.fr/files/styles/image_3200/public/newyorkcity.jpg?w=1600
+        alt="newyork" />
+      </article>
+      <article>
+        <span class="title">Pékin</span
+        ><img
+          src="https://blog.action-sejours.com/wp-content/uploads/2018/11/sejour-a-pekin-temple.jpg"
+          alt="pekin"
+        />
+      </article>
+      <article>
+        <span class="title">Dehli</span
+        ><img
+          src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/68000/68002-New-Delhi.jpg"
+          alt="dehli"
+        />
+      </article>
+      <article>
+        <span class="title">Tokyo</span
+        ><img
+          src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1665546545/tcjr9rtr5smfzgdgofcg.jpg"
+          alt="tokyo"
+        />
+      </article>
+      <article>
+        <span class="title">Jakarta</span
+        ><img
+          src="https://images.ctfassets.net/bth3mlrehms2/3fOAIznSb8rZz37T6ZDY1d/e7ff81d86d87cdff2ce4765b23d007db/Indonesien__Jakarta__2_.jpg?w=2291&h=1288&fl=progressive&q=50&fm=jpg"
+          alt="jakarta"
+        />
+      </article>
+      <article>
+        <span class="title">Shanghai</span
+        ><img
+          src="https://images.ctfassets.net/bth3mlrehms2/3FQ07QbluuREH3INj2ugpU/d491fb90fbc0089680147933a1b2d209/iStock-829719292.jpg?w=2944&h=1656&fl=progressive&q=50&fm=jpg"
+          alt="shanghai"
+        />
+      </article>
+      <article>
+        <span class="title">Berlin</span
+        ><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQItGh26Ag_CQP6lMh3Sf1QxRDuu1bqs3G6ww&s"
+          alt="berlin"
+        />
+      </article>
+    </div>
+  </body>
+</html>
