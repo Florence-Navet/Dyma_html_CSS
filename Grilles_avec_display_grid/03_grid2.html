@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les grilles</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h2,
+      h3 {
+        margin: 5px;
+      }
+
+      .container-flex {
+        display: inline-flex;
+        flex-flow: column;
+        margin-bottom: 5px;
+      }
+
+      .wrapper {
+        display: inline-grid;
+        margin-left: 5px;
+        border: red solid 2px;
+        width: 200px;
+        height: 200px;
+        grid-template-columns: repeat(auto-fill, 40px);
+        grid-template-rows: repeat(auto-fill, 40px);
+      }
+
+      .elem {
+        background: #4a69bd;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .auto-col {
+        grid-auto-flow: column;
+      }
+
+      .auto-row-dense {
+        grid-auto-flow: row dense;
+      }
+
+      .auto-col-dense {
+        grid-auto-flow: column dense;
+      }
+
+      /* Les éléments positionnés sortent du 
+      positionnement automatique  */
+      .h-1 {
+        background: #eb2f06;
+        grid-column-end: 4;
+      }
+      .h-4 {
+        background: #fa983a;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-column: 2 span;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Positionnement des éléments et placement automatique</h2>
+    <div class="container-flex">
+      <h3>Row (défaut)</h3>
+      <div class="wrapper">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+
+    <div class="container-flex">
+      <h3>Row dense</h3>
+      <div class="wrapper auto-row-dense">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Column</h3>
+      <div class="wrapper auto-col">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Column Dense</h3>
+      <div class="wrapper auto-col-dense">
+        <div class="elem h-1">1</div>
+        <div class="elem h-2">2</div>
+        <div class="elem h-3">3</div>
+        <div class="elem h-4">4</div>
+        <div class="elem">5</div>
+        <div class="elem">6</div>
+        <div class="elem">7</div>
+        <div class="elem">8</div>
+        <div class="elem">9</div>
+        <div class="elem">10</div>
+        <div class="elem">11</div>
+        <div class="elem">12</div>
+      </div>
+    </div>
+  </body>
+</html>
