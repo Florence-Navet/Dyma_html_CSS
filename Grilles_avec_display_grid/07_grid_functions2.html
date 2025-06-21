@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les grilles</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h2,
+      h3 {
+        margin: 5px;
+      }
+
+      .container-flex {
+        display: inline-flex;
+        flex-flow: column;
+        margin-bottom: 5px;
+        width: 50%;
+        height: 33vh;
+      }
+
+      .container {
+        display: inline-grid;
+        margin-left: 5px;
+        border: red solid 2px;
+      }
+
+      img {
+        width: 200px;
+      }
+
+      .elem {
+        background: #4a69bd;
+        border: 1px solid black;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .elem-1 {
+        background: #eb2f06;
+      }
+      .elem-2 {
+        background: #fa983a;
+      }
+      .elem-3 {
+        background: #1e3799;
+      }
+      .elem-4 {
+        background: #78e08f;
+      }
+      .elem-5 {
+        background: #f8c291;
+      }
+
+      /* La piste colonne 1 fera toujours la
+        largeur de l'image qui est son plus large élément */
+      .max-content {
+        grid-template-columns: max-content 1fr 1fr;
+      }
+
+      /* La piste colonne 1 fera toujours la
+        largeur de la première cellule qui est son plus petit élément */
+      .min-content {
+        grid-template-columns: min-content 1fr 1fr;
+      }
+
+      /* La piste colonne 1 fera au minimum la largeur de la cellule 1
+        et au miximum la largeur de la cellule 4 */
+      .minmax-content {
+        grid-template-columns: minmax(min-content, max-content) 1fr 1fr;
+        /* Equivaut aussi à */
+        grid-template-columns: minmax(auto, auto) 1fr 1fr;
+      }
+
+      .auto-content {
+        grid-template-columns: minmax(auto, auto) 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Utilisation de max-content</h2>
+    <div class="container-flex">
+      <div class="container max-content">
+        <img
+          src="https://images.unsplash.com/photo-1572926598340-edec895c4335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
+        />
+        <div class="elem elem-1">1</div>
+        <div class="elem elem-2">2</div>
+        <div class="elem elem-3">3</div>
+        <div class="elem elem-4">4</div>
+      </div>
+    </div>
+
+    <h2>Utilisation de min-content</h2>
+    <div class="container-flex">
+      <div class="container min-content">
+        <div class="elem elem-1">Un texte</div>
+        <div class="elem elem-2">
+          2
+        </div>
+        <div class="elem elem-3">3</div>
+        <div class="elem elem-4">
+          Un texte plus long qui va du coup aller sur plusieurs lignes
+        </div>
+        <div class="elem elem-5">5</div>
+      </div>
+    </div>
+
+    <h2>Utilisation de min et max content avec minmax()</h2>
+    <div class="container-flex">
+      <div class="container minmax-content">
+        <div class="elem elem-1">Un texte</div>
+        <div class="elem elem-2">
+          2
+        </div>
+        <div class="elem elem-3">3</div>
+        <div class="elem elem-4">
+          Un texte plus long qui va du coup aller sur plusieurs lignes
+        </div>
+        <div class="elem elem-5">5</div>
+      </div>
+    </div>
+  </body>
+</html>

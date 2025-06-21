@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Les grilles</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .conteneur {
+        display: grid;
+        margin: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 150px;
+        grid-template-areas:
+          "header header header header"
+          "main main . sidebar"
+          "main main . sidebar"
+          "footer footer footer footer";
+      }
+      .elem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Anton", sans-serif;
+        font-size: 28px;
+        color: white;
+      }
+
+      header {
+        grid-area: header;
+        background: #eb2f06;
+      }
+      main {
+        grid-area: main;
+        background: #1e3799;
+      }
+      nav {
+        grid-area: sidebar;
+        background: #fa983a;
+      }
+      footer {
+        grid-area: footer;
+        background: #079992;
+      }
+
+      @media (max-width: 500px) {
+        .conteneur {
+          grid-template-columns: 100%;
+          grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "main"
+            "footer";
+        }
+      }
+
+      @media (min-width: 500px) and (max-width: 700px) {
+        .conteneur {
+          grid-template-areas:
+            "header header header header"
+            "main main main sidebar"
+            "main main main sidebar"
+            "footer footer footer footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteneur">
+      <header class="elem">En-tête</header>
+      <nav class="elem">Navigation</nav>
+      <main class="elem">Zone principale</main>
+      <footer class="elem">Pied de page</footer>
+    </div>
+  </body>
+</html>
