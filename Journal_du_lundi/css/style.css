@@ -102,11 +102,15 @@ hr {
   border: 1px solid var(--dark);
   background: white;
   color: var(--dark);
-
 }
 .mx-1 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.underline {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 2rem;
 }
 /* generic */
 
@@ -227,4 +231,41 @@ nav {
   padding: 1rem 0;
   margin-right: 1rem;
   outline: 0;
+}
+/* content */
+.content {
+  margin: 3rem 0;
+  display: flex;
+}
+.articles {
+  flex: auto;
+}
+.articles article {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "title img"
+    "content img"
+    "author img"
+    "details img";
+}
+.articles article img {
+  grid-area: img;
+}
+.articles article h3 {
+  grid-area: title;
+}
+.articles article p:first-child {
+  grid-area: content;
+}
+.articles article .article-author {
+  grid-area: author;
+}
+.articles article .text-hint {
+  grid-area: details;
+}
+
+.popular {
+  flex: 350px;
 }
