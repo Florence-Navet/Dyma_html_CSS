@@ -43,6 +43,8 @@ a {
     display: block;
     margin: auto;
     max-width: 1100px;
+    height: 1500px;
+
 }
 .text-primary {
   
@@ -97,3 +99,13 @@ header ul li {
 ul {
     list-style: none;
 }   
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
+
