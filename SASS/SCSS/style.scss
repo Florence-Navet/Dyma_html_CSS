@@ -1,0 +1,18 @@
+//variables
+@use "variables";
+@use "variables_secondary";
+@use "cards";
+@use "buttons";
+// @use "variables_secondary" as *; on import toute la bibliotheque
+// avec un alias ::alias
+//@use "variables as v";
+
+body {
+  margin: 0;
+  font-family: variables.$font-family;
+  background-color: variables.$gray;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,21 @@
+.card {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 1rem;
+  background: white;
+}
+.card h1 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.card h1 span {
+  color: green;
+}
+.card .text {
+  color: #333;
+}
+
+/*# sourceMappingURL=index.css.map */
