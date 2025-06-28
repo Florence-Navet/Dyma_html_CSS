@@ -1,2 +1,4 @@
 test/
 *test*
+# Ignorer les dépendances installées
+node_modules/
