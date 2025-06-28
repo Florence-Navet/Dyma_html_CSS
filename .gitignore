@@ -1,4 +1,14 @@
-test/
-*test*
-# Ignorer les dépendances installées
+# Node
 node_modules/
+package-lock.json
+
+# SASS
+*.css.map
+
+# Mac/Windows
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
