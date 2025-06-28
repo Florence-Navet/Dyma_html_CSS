@@ -1,0 +1,13 @@
+//variables
+@use "variables";
+@use "variables_secondary";
+// @use "variables_secondary" as *; on import toute la bibliotheque
+// avec un alias ::alias
+//@use "variables as v";
+
+body {
+  margin: 0;
+  font-family: variables.$font-family;
+  background-color: variables_secondary.$primary;
+  height: 100vh;
+}
