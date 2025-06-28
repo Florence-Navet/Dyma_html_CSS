@@ -1,21 +1,43 @@
 @use "variables";
+@use "mixins";
+@use "media";
+@use "functions";
 
 .card {
+  @include media.xs {
+    background: red;
+  }
+  @include media.xl {
+    background: orange;
+  }
   width: 500px;
   height: 300px;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 30px;
   padding: 1rem;
   background: white;
+  position: absolute;
+  left: functions.centerAbsolute(500px);
+  top: functions.centerAbsolute(300px);
   h1 {
     font-size: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid variables.$gray;
     span {
       color: variables.$primary;
+      @include media.xs {
+        color: rgb(0, 26, 255);
+      }
+      @include media.xl {
+        background: rgb(229, 232, 221);
+      }
     }
   }
   .text {
     color: #333;
+  }
+  ul {
+    @include mixins.inline-list;
   }
 }
