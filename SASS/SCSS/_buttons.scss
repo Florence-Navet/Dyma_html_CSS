@@ -1,4 +1,6 @@
-.btn {
+/*remplace .btn par %btn pour l'heritage*/
+
+%btn {
   &:hover {
     opacity: 0.8;
   }
@@ -10,16 +12,34 @@
   color: white;
   font-weight: 700;
   cursor: pointer;
-  &-warning {
-    background: orange;
-  }
-  &-primary {
-    background: blue;
-  }
-  &-danger {
-    background: red;
-  }
-  &-default {
-    background: #bbb;
-  }
+  // &-warning {
+  //   background: orange;
+  // }
+  // &-primary {
+  //   background: blue;
+  // }
+  // &-danger {
+  //   background: red;
+  // }
+  // &-default {
+  //   background: #bbb;
+  // }
+}
+
+//l'heritage
+.btn-warning {
+  @extend%btn;
+  background: orange;
+}
+.btn-primary {
+  @extend%btn;
+  background: blue;
+}
+.btn-danger {
+  @extend%btn;
+  background: red;
+}
+.btn-default {
+  @extend%btn;
+  background: #bbb;
 }

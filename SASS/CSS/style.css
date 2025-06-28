@@ -1,10 +1,24 @@
 .card {
   width: 500px;
   height: 300px;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 30px;
   padding: 1rem;
   background: white;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: calc(50% - 150px);
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    background: red;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .card {
+    background: orange;
+  }
 }
 .card h1 {
   font-size: 1.5rem;
@@ -14,11 +28,30 @@
 .card h1 span {
   color: green;
 }
+@media only screen and (max-width: 500px) {
+  .card h1 span {
+    color: rgb(0, 26, 255);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .card h1 span {
+    background: rgb(229, 232, 221);
+  }
+}
 .card .text {
   color: #333;
 }
+.card ul {
+  padding-left: 0;
+  list-style: none;
+}
+.card ul li {
+  display: inline-block;
+  padding: 1rem 2rem;
+}
 
-.btn {
+/*remplace .btn par %btn pour l'heritage*/
+.btn-default, .btn-danger, .btn-primary, .btn-warning {
   border: 0;
   border-radius: 5px;
   padding: 1rem 2rem;
@@ -28,18 +61,22 @@
   font-weight: 700;
   cursor: pointer;
 }
-.btn:hover {
+.btn-default:hover, .btn-danger:hover, .btn-primary:hover, .btn-warning:hover {
   opacity: 0.8;
 }
+
 .btn-warning {
   background: orange;
 }
+
 .btn-primary {
   background: blue;
 }
+
 .btn-danger {
   background: red;
 }
+
 .btn-default {
   background: #bbb;
 }
@@ -49,9 +86,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: #eee;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
